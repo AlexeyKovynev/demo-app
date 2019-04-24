@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://pg_db:5432/demo_db #Use 'localhost' instead of 'pg_db' when launching Spring app outside docker
+    username: postgresuser
+    password: postgrespass
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+
+server:
+  port: 8080
+
+jwt:
+  token:
+    secret: mySecret
+    expired: 3600000
